@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="teacher_base::layout(~{::section})">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Student Profile</title>
+
+</head>
+<body>
+
+
+<section class="text-center">
+    <h1>Teacher's Profile Page</h1>
+
+
+    <th:block th:if="${user != null}">
+        <img height="250px" width="250px" th:src="@{${'/teacher/display?id=' + teacher.teacherId}}" alt="Teacher's Image"/>
+        <h4>Name: [[${teacher.name}]]</h4>
+        <h4>Email: [[${teacher.email}]]</h4>
+        <h4>Id: [[${teacher.teacherId}]]</h4>
+        <h4>Class ID: [[${teacher.classId}]]</h4>
+    </th:block>
+
+    <th:block th:if="${user == null}">
+        <p>User information not available.</p>
+    </th:block>
+
+</section>
+
+</body>
+</html>

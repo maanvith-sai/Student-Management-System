@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dabca811-fce5-4c25-adee-e1577958f16d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/controller/semester/EighthSemesterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/controller/semester/EighthSemesterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/controller/semester/FirstSemesterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/controller/semester/FirstSemesterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/controller/semester/FourthSemesterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/controller/semester/FourthSemesterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/eighth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/eighth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/fifth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/fifth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/first.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/first.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/fourth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/fourth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/second.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/second.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/seventh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/seventh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/sixth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/sixth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/third.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/entity/semester/third.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/EighthSemesterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/EighthSemesterInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/FifthSemesterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/FifthSemesterInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/FirstSemesterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/FirstSemesterInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/FourthSemesterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/FourthSemesterInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/SecondSemesterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/SecondSemesterInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/SeventhSemesterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/SeventhSemesterInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/SixthSemesterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/SixthSemesterInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/ThirdSemesterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/repository/semester/ThirdSemesterInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/service/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/service/TeacherServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/service/excelService/FirstExcelFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/service/excelService/FirstExcelFileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studentManagement/service/excelService/impl/FirstExcelFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studentManagement/service/excelService/impl/FirstExcelFileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/create_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/create_student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/create_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/create_teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit_teacher.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2cdmLOYGfe0gkQOYkUm5YqhUov7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nithi/OneDrive/Desktop/spring boot projects/demo (2)&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.studentManagement.Application" />
+      <module name="Student-Portal-Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.studentManagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dabca811-fce5-4c25-adee-e1577958f16d" name="Changes" comment="" />
+      <created>1708449773737</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708449773737</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/studentManagement/service/excelService/impl/FirstExcelFileServiceImpl.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="admin_base::layout(~{::section})">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Students Management System</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+<!--	<nav class="navbar navbar-expand-md navbar-dark bg-dark">-->
+<!--		&lt;!&ndash;Brand&ndash;&gt;-->
+<!--		<a class="navbar-brand" href="#">Student Management System</a>-->
+<!--		&lt;!&ndash; Navbar Links&ndash;&gt;-->
+<!--		<div class="collapse navbar-collapse" id="collapsibleNavbar">-->
+<!--			<ul class="navbar-nav">-->
+<!--				<li class="nav-item">-->
+<!--					<a class="nav-link" th:href="@{/student/students}">Student's List</a>-->
+<!--				</li>-->
+<!--				<li class="nav-item">-->
+<!--					<a class="nav-link" th:href="@{/teacher/teachers}">Teacher's List</a>-->
+<!--				</li>-->
+<!--&lt;!&ndash;				<li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;					<a class="nav-link" th:href="/logout">lOGOUT</a>&ndash;&gt;-->
+<!--&lt;!&ndash;				</li>&ndash;&gt;-->
+<!--				<li class="nav-item">-->
+<!--					<a class="nav-link" th:href="@{/admin/profile}">Home</a>-->
+<!--				</li>-->
+<!--			</ul>-->
+<!--		</div>-->
+<!--		</div>-->
+<!--	</nav>-->
+
+	<section class="container">
+		<div class="row">
+			<h1> List Students </h1>
+		</div>
+<!--		<div class="row">-->
+<!--			<div class="col-lg-3">-->
+<!--				<a class="btn btn-primary btn-sm mb3" th:href="@{/register}"> Add Student </a>-->
+<!--			</div>-->
+<!--		</div>-->
+		<br>
+		<div>
+			<table class="table table-success table-striped table-hover">
+				<thead class="table-dark">
+					<tr>
+						<th scope="col">Student ID</th>
+						<th scope="col">First Name</th>
+						<th scope="col">Last Name</th>
+						<th scope="col">Email</th>
+						<th scope="col">Teacher Id</th>
+						<th scope="col">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="student: ${students}">
+						<td th:text="${student.id}"></td>
+						<td th:text="${student.firstName}"></td>
+						<td th:text="${student.lastName}"></td>
+						<td th:text="${student.email}"></td>
+						<td th:text="${student.teacherId}"></td>
+						<td>
+							<a th:href="@{/admin/students/edit/{id}(id=${student.id})}" class="btn btn-primary">
+							Update
+							</a>
+							
+							<a th:href="@{/admin/students/{id}(id=${student.id})}" class="btn btn-danger">
+							Delete
+							</a>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+			</table>
+		</div>
+	</section>
+
+</body>
+
+</html>

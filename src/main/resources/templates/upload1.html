@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="teacher_base::layout(~{::section})">
+<head>
+  <meta charset="UTF-8">
+  <title>Excel File Upload</title>
+</head>
+<body>
+<section>
+<h2>Upload Excel File</h2>
+<form th:action="@{/teacher/uploadSecond/upload}" method="post" enctype="multipart/form-data">
+  <input type="file" name="file" accept=".xlsx, .xls">
+  <br>
+  <button type="submit">Upload</button>
+</form>
+</section>c
+</body>
+</html>

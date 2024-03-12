@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="teacher_base::layout(~{::section})">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Result</title>
+
+</head>
+
+<body>
+<section>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+<!--            margin: 20px;-->
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        p.success {
+            color: #28a745;
+        }
+
+        p.error {
+            color: #dc3545;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+         tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        tr.grade-f {
+            color: red;
+        }
+
+        /* Mobile responsiveness using flexbox */
+        @media (max-width: 768px) {
+            table {
+                display: flex;
+                flex-direction: column;
+                overflow-x: auto;
+                width: 100%;
+            }
+
+            th, td {
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 5px;
+            }
+
+            th {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            tr {
+                background-color: #fff;
+                margin-bottom: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+<h2>Upload Result</h2>
+
+<p class="success" th:text="${message}"></p>
+<p class="error" th:text="${error}"></p>
+
+<!-- Display entities if needed -->
+<table id="resultTable" th:if="${entities}">
+    <thead>
+    <tr>
+        <th style="width: 10%;">Student ID</th>
+        <th style="width: 15%;">Subject Name</th>
+        <th style="width: 10%;">Internals</th>
+        <th style="width: 10%;">Externals</th>
+        <th style="width: 10%;">Total</th>
+        <th style="width: 10%;">Grade</th>
+        <th style="width: 10%;">Regulation</th>
+        <th style="width: 15%;">Attendance</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="entity, rowStat : ${entities}" th:class="${rowStat.odd} ? 'odd' : 'even'">
+        <td th:text="${entity.getId1}"></td>
+        <td th:text="${entity.getSubjectName}"></td>
+        <td th:text="${entity.internals}"></td>
+        <td th:text="${entity.externals}"></td>
+        <td></td> <!-- Placeholder for total, to be filled by JavaScript -->
+        <td></td> <!-- Placeholder for grade, to be filled by JavaScript -->
+        <td th:text="${entity.regulation}"></td>
+        <td th:text="${entity.attendance}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+    // Example JavaScript - You can customize this based on your requirements
+    document.addEventListener('DOMContentLoaded', function () {
+        var table = document.getElementById('resultTable');
+        var rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+        for (var i = 0; i < rows.length; i++) {
+            var internals = parseInt(rows[i].getElementsByTagName('td')[2].innerText);
+            var externals = parseInt(rows[i].getElementsByTagName('td')[3].innerText);
+            var total = internals + externals;
+
+            var totalCell = rows[i].getElementsByTagName('td')[4];
+            totalCell.innerText = total;
+
+            var gradeCell = rows[i].getElementsByTagName('td')[5];
+            var grade = calculateGrade(total);
+            gradeCell.innerText = grade;
+
+            if (grade === 'F') {
+                rows[i].classList.add('grade-f');
+            }
+        }
+
+        function calculateGrade(total) {
+            if (total >= 90) {
+                return 'S';
+            } else if (total >= 80) {
+                return 'A';
+            } else if (total >= 70) {
+                return 'B';
+            } else if (total >= 60) {
+                return 'C';
+            } else if (total >= 50) {
+                return 'D';
+            } else if (total >= 35) {
+                return 'E';
+            } else {
+                return 'F';
+            }
+        }
+
+        console.log('Page loaded');
+    });
+</script>
+</section>
+</body>
+
+</html>
+
