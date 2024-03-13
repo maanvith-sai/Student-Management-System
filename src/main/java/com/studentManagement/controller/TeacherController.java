@@ -5,6 +5,7 @@ import com.studentManagement.entity.Student;
 import com.studentManagement.entity.Teacher;
 import com.studentManagement.entity.User;
 import com.studentManagement.entity.semester.*;
+import com.studentManagement.repository.StudentRepository;
 import com.studentManagement.repository.TeacherRepository;
 import com.studentManagement.repository.UserRepo;
 import com.studentManagement.repository.semester.FirstSemesterInterface;
@@ -55,6 +56,9 @@ public class TeacherController {
 
     @Autowired
     TeacherRepository teacherRepository;
+
+    @Autowired
+    StudentRepository studentRepository;
 
     User user;
 
@@ -303,7 +307,20 @@ public class TeacherController {
         return eighth.method1(value, model);
     }
 
+//=========================================================================================================================================================
+//=============================================================================================================================================================
 
+    @RequestMapping("/getStudents")
+    public String getSecondSemesterAttendance(Model model)
+    {
 
+            List<Student> entities = studentRepository.viewStudents(user.getUserId());
+            model.addAttribute("entities", entities);
+            Teacher t = teacherRepository.findByTeacherId(user.getUserId());
+
+            model.addAttribute("semester",t.getClassId());
+
+        return "viewStudents";
+    }
 
 }

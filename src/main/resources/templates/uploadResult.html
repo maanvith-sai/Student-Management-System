@@ -102,7 +102,10 @@
             }
         }
     </style>
-<h2>Upload Result</h2>
+    <br>
+    <br>
+    <br>
+<h2 th:if="${semester}">[[${semester}]]</h2>
 
 <p class="success" th:text="${message}"></p>
 <p class="error" th:text="${error}"></p>

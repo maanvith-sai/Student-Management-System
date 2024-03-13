@@ -130,7 +130,7 @@ public class AdminController
 	{
 		User use1 = new User();
 		use1.setUserId(teacher.getTeacherId().toUpperCase());
-		use1.setName(teacher.getName());
+		use1.setName(teacher.getName().toUpperCase());
 		use1.setRole("ROLE_TEACHER");
 		use1.setPassword(new BCryptPasswordEncoder().encode(teacher.getPassword()));
 		userRepo.save(use1);
@@ -145,10 +145,10 @@ public class AdminController
 				throw new RuntimeException(e);
 			}
 		}
-		teach1.setName(teacher.getName());
+		teach1.setName(teacher.getName().toUpperCase());
 		teach1.setEmail(teacher.getEmail());
-		teach1.setTeacherId(teacher.getTeacherId());
-		teach1.setClassId(teacher.getClassId());
+		teach1.setTeacherId(teacher.getTeacherId().toUpperCase());
+		teach1.setClassId(teacher.getClassId().toUpperCase());
 		teach1.setPassword(teacher.getPassword());
 		teacherRepository.save((teach1));
 		return listTeachers(m,principal);
@@ -174,12 +174,12 @@ public class AdminController
 				Blob blob = new javax.sql.rowset.serial.SerialBlob(imageBytes);
 				std.setImage(blob);
 			}
-			std.setId(student.getId());
-			std.setFirstName(student.getFirstName());
-			std.setLastName(student.getLastName());
+			std.setId(student.getId().toUpperCase());
+			std.setFirstName(student.getFirstName().toUpperCase());
+			std.setLastName(student.getLastName().toUpperCase());
 			std.setEmail(student.getEmail());
 			std.setPassword(student.getPassword());
-			std.setTeacherId(student.getTeacherId());
+			std.setTeacherId(student.getTeacherId().toUpperCase());
 			studentRepository.save(std);
 			return listStudents(m,principal);
 		}

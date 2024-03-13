@@ -74,18 +74,6 @@ public class Student {
 		this.eighth=eighth;
 		this.image = image;
 	}
-
-	public String getImageBase64() {
-		try {
-			if (image != null) {
-				byte[] imageBytes = image.getBytes(1, (int) image.length());
-				return Base64.getEncoder().encodeToString(imageBytes);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace(); // Handle the exception appropriately
-		}
-		return null;
-	}
 	public List<second> getSecond()
 	{
 		return second;
